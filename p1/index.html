@@ -3,11 +3,21 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <h1>People entered:</h1>
-    <h2 id="count-el">0</h2>
-    <button id="increment-btn" onclick="increment()">INCREMENT</button>
-    <button id="save-btn" onclick="save()">SAVE</button>
-    <p id="save-el">Previous entries: </p>
+    <main>
+      <h1>Metric/Imperial Unit Conversions</h1>
+      <form id="form">
+        <input type="number" id="value" value=0>
+      </form>
+    </main>
+
+    <h2>Length (Meter/Feet)</h2>
+    <p id="length">0 meters = 0.000 feet | 0 feet = 0.000 meters</p>
+
+    <h2>Volume (Liters/Gallon)</h2>
+    <p id="volume">0 liters = 0.000 gallons | 0 gallons = 0.000 liters</p>
+
+    <h2>Mass (Kilograms/Pounds)</h2>
+    <p id="mass">0 kilos = 0.000 pounds | 0 pounds = 0.000 kilos</p>
 
     <script src="index.js"></script>
   </body>

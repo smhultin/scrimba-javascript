@@ -1,17 +1,36 @@
-// DOM = Document Object Model, how JS is used to modify websites
+let formEl = document.getElementById("form")
+let lengthEl = document.getElementById("length")
+let volumeEl = document.getElementById("volume")
+let massEl = document.getElementById("mass")
 
-let countEl = document.getElementById("count-el")
-let count = 0
+let n = 0
 
-function increment() {
-  count += 1
-  countEl.textContent = count
+function onInput(e) {
+  event.preventDefault()
+  n = document.getElementById("value").value
+  computeLength()
+  computeVolume()
+  computeMass()
+}
+formEl.addEventListener('input', onInput)
+
+function computeLength() {
+  let feet = (n * 3.281).toFixed(3)
+  let meters = (n / 3.281).toFixed(3)
+  lengthEl.textContent = n + " meters = " + feet + " feet | " +
+                         n + " feet = " + meters + " meters"
 }
 
-function save() {
-  let saveEl = document.getElementById("save-el")
-  saveEl.textContent += count + " - "
+function computeVolume() {
+  let gallons = (n / 3.785).toFixed(3)
+  let liters = (n * 3.785).toFixed(3)
+  volumeEl.textContent = n + " liters = " + gallons + " gallons | " +
+                         n + " gallons = " + liters + " liters"
+}
 
-  count = 0
-  countEl.textContent = 0
+function computeMass() {
+   let pounds = (n * 2.205).toFixed(3)
+   let kilos = (n / 2.205).toFixed(3)
+   massEl.textContent = n + " kilos = " + pounds + " pounds | " +
+                          n + " pounds = " + kilos + " kilos"
 }
