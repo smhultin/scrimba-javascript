@@ -5,4 +5,6 @@ Project files for Learn JavaScript For Free by Scrimba
 
 **Example 2:** Blackjack.
 
-**Solo Project 1:** Unit converter.
+**Solo Project 1:** Basketball scoreboard.
+
+**Solo Project 3:** Unit converter.
